@@ -31,12 +31,6 @@ def chooseWord(wordlist):
 # end of helper code
 # -----------------------------------
 
-# Load the list of words into the variable wordlist
-# so that it can be accessed from anywhere in the program
-wordlist = loadWords()
-
-
-
 def isWordGuessed(secretWord, lettersGuessed):
     if lettersGuessed==[]:
         return False
@@ -116,5 +110,8 @@ def hangman(secretWord):
             print ('Sorry, you ran out of guesses. The word was ' + secretWord +'.')
   
 
+# Load the list of words into the variable wordlist
+# so that it can be accessed from anywhere in the program
+wordlist = loadWords()
 secretWord=chooseWord(wordlist)
 hangman(secretWord)
